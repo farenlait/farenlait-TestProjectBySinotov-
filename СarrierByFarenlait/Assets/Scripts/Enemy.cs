@@ -2,7 +2,7 @@
 
 public class Enemy : MonoBehaviour
 {
-    const int COUNTVERTICALPOINT = 5;
+    const int COUNTVERTICALPOINT = 7;
 
     public GameObject musicEnemy;
     public ParticleSystem partical;
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     {
         boomMusic = musicEnemy.GetComponent<AudioSource>();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < COUNTVERTICALPOINT; i++)
         {
             verticalLeftPoints[i] = new Vector3(-6.6f + 2.2f * i, 1.5f, 9);
             verticalRightPoints[i] = new Vector3(-6.6f + 2.2f * i, 1.5f, -26);

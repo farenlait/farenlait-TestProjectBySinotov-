@@ -75,6 +75,7 @@ public class MainWorld : MonoBehaviour
         flagStopGame = false;
         lvlProgress.value = 0;
 
+        heroScript.enabled = true;
         heroScript.startGame();
         spawnEnemyScript.startGame();
         joyScript.startGame();
@@ -110,6 +111,7 @@ public class MainWorld : MonoBehaviour
 
     public void gameWin()
     {
+        heroScript.enabled = false;
         winPlay.Play();
         flagStopGame = true;
         lvlProgress.value = 0;
@@ -138,6 +140,7 @@ public class MainWorld : MonoBehaviour
 
     public void gameLose()
     {
+        heroScript.enabled = false;
         losePlay.Play();
         flagStopGame = true;
         spawnEnemyScript.gameWinOrLose(false);
